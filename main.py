@@ -13,8 +13,7 @@ def main():
     equipaje2 = CheckedLuggage(20.0, "TAG002")
     pass1 = BoardingPass(pasajero1, vuelo, "A1", [equipaje1])
     pass2 = BoardingPass(pasajero2, vuelo, "A2", [equipaje2])
-    pass1.print_pass()
-    pass2.print_pass()
+
 
 if __name__ == "__main__":
     main()
