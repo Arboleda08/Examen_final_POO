@@ -11,10 +11,10 @@ class CheckInCounter():
         if self.flight.is_full():
             raise FlightFullError("The flight is full. Cannot check in.")
         
+        seat = self.flight.assign_seat()
+
         for luggage in luggage_list:
             luggage.validate_weight()
-
-        seat = self.flight.assign_seat()
 
         boarding_pass = BoardingPass(passenger, self.flight, seat, luggage_list)
 
